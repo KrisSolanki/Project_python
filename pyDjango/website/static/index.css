@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.header{
+
+.header {
     background-color: black;
     color: white;
     display: flex;
@@ -12,35 +13,37 @@
     width: 100%;
     height: 64px;
 }
-.title{
+
+.title {
     padding-left: 20px;
 }
-.left_sidemenu{
-    /* display: flex; */
-   /* flex-direction: row; */
+
+.left_sidemenu {
     width: 30%;
 }
-.list_items{
+
+.list_items {
     display: flex;
     justify-content: space-around;
     list-style: none;
     font-size: 16px;
 }
-.list_items li a{
+
+.list_items li a {
     color: white;
     text-decoration: none;
 }
-.list_items li{
+
+.list_items li {
     transition: 0.2s ease-out;
     cursor: pointer;
+}
 
-}
-.list_items li:hover{
-    /* transform: translate(0,-5px); */
+.list_items li:hover {
     transition: 0.2s ease-in-out;
-    
 }
-.list_items li a:hover{
+
+.list_items li a:hover {
     color: red;
     transition: 0.2s ease-in-out;
 }
@@ -49,8 +52,8 @@
     padding: 20px;
     text-align: center;
 }
-.main_line{
-    
+
+.main_line {
     margin-top: 10px;
 }
 
@@ -64,7 +67,7 @@
     width: 100%;
 }
 
-.footer-container {
+.footer_container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -82,4 +85,48 @@
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+.user {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.user form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.user form p {
+    margin-bottom: 10px;
+}
+
+.user form input[type="text"],
+.user form input[type="email"],
+.user form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.user form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.user form button:hover {
+    background-color: #555;
 }

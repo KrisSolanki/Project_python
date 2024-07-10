@@ -5,31 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static '/index.css' %}"> 
+    <link rel="stylesheet" href="{% static 'index.css' %}"> 
 </head>
 
 <body class='body'>
     <!-- Header -->
     <header class="header"> 
-
         <div class="title">
             <p>Kris Solanki</p>
         </div>
         <div class="left_sidemenu">
             <ul class="list_items">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="{% url 'display_users' %}">View Users</a></li>
                 <li><a href="#">Login</a></li>
             </ul>
         </div>
-
     </header>
     
     <p>{{current_datetime}}</p>
+    
     <!-- Main content area  -->
     <main class="main-content">
         <h2>Welcome to My Web Page</h2>
         <p class="main_line">This is a simple web page created as an exercise. It includes a header, a main content area, and a footer.</p>
+        
+        <div class="user">
+            <h1>User Details Form</h1>
+            
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+            
+        </div>
+        
     </main>
 
     <!-- Footer -->
