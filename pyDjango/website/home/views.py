@@ -22,8 +22,6 @@ def index(request):
     }
     return render(request,"index.html",context)
 
-# def form_success(request):
-#     return render(request, 'form_success.html')
 
 def display_users(request):
     users = User.objects.all()
